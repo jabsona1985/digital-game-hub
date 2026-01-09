@@ -309,4 +309,9 @@ export const translations = {
   },
 } as const;
 
-export type TranslationKeys = typeof translations.en;
+// Deep type that converts literal strings to string type
+type DeepStringify<T> = {
+  [K in keyof T]: T[K] extends string ? string : DeepStringify<T[K]>;
+};
+
+export type TranslationKeys = DeepStringify<typeof translations.en>;
