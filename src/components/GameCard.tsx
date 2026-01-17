@@ -1,8 +1,10 @@
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { useCart } from '@/hooks/useCart';
 import { Language } from '@/lib/i18n/translations';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ShoppingCart, Star } from 'lucide-react';
+import { toast } from 'sonner';
 
 interface Game {
   id: string;
@@ -27,6 +29,7 @@ interface GameCardProps {
 
 export function GameCard({ game, language }: GameCardProps) {
   const { t } = useLanguage();
+  const { addToCart } = useCart();
 
   const getLocalizedTitle = () => {
     if (language === 'ge' && game.title_ge) return game.title_ge;
@@ -120,7 +123,14 @@ export function GameCard({ game, language }: GameCardProps) {
               </span>
             )}
           </div>
-          <Button size="sm" className="bg-gradient-primary hover:opacity-90 glow-primary">
+          <Button 
+            size="sm" 
+            className="bg-gradient-primary hover:opacity-90 glow-primary"
+            onClick={() => {
+              addToCart(game);
+              toast.success(t.cart.addedToCart);
+            }}
+          >
             <ShoppingCart className="h-4 w-4" />
           </Button>
         </div>
