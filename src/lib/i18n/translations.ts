@@ -91,6 +91,24 @@ export const translations = {
       totalOrders: 'Total Orders',
       revenue: 'Revenue',
     },
+    // Games Page
+    gamesPage: {
+      title: 'All Games',
+      subtitle: 'Discover your next favorite game from our collection',
+      platforms: 'Platforms',
+      categories: 'Categories',
+      priceRange: 'Price Range',
+      filters: 'Filters',
+      clearFilters: 'Clear Filters',
+      sortBy: 'Sort by',
+      sortNewest: 'Newest',
+      sortPriceLow: 'Price: Low to High',
+      sortPriceHigh: 'Price: High to Low',
+      sortName: 'Name',
+      sortRating: 'Rating',
+      gamesFound: 'games found',
+      noResultsHint: 'Try adjusting your filters or search query',
+    },
     // Common
     common: {
       loading: 'Loading...',
@@ -99,8 +117,8 @@ export const translations = {
       cancel: 'Cancel',
       delete: 'Delete',
       edit: 'Edit',
-      search: 'Search...',
-      noResults: 'No results found',
+      search: 'Search games...',
+      noResults: 'No games found',
     },
   },
   ge: {
@@ -193,6 +211,24 @@ export const translations = {
       totalOrders: 'სულ შეკვეთები',
       revenue: 'შემოსავალი',
     },
+    // Games Page
+    gamesPage: {
+      title: 'ყველა თამაში',
+      subtitle: 'აღმოაჩინე შენი შემდეგი საყვარელი თამაში ჩვენი კოლექციიდან',
+      platforms: 'პლატფორმები',
+      categories: 'კატეგორიები',
+      priceRange: 'ფასის დიაპაზონი',
+      filters: 'ფილტრები',
+      clearFilters: 'ფილტრების გასუფთავება',
+      sortBy: 'დალაგება',
+      sortNewest: 'უახლესი',
+      sortPriceLow: 'ფასი: დაბლიდან მაღლამდე',
+      sortPriceHigh: 'ფასი: მაღლიდან დაბლამდე',
+      sortName: 'სახელი',
+      sortRating: 'რეიტინგი',
+      gamesFound: 'თამაში მოიძებნა',
+      noResultsHint: 'სცადე ფილტრების ან ძებნის შეცვლა',
+    },
     // Common
     common: {
       loading: 'იტვირთება...',
@@ -201,8 +237,8 @@ export const translations = {
       cancel: 'გაუქმება',
       delete: 'წაშლა',
       edit: 'რედაქტირება',
-      search: 'ძებნა...',
-      noResults: 'შედეგები ვერ მოიძებნა',
+      search: 'თამაშების ძებნა...',
+      noResults: 'თამაშები ვერ მოიძებნა',
     },
   },
   ru: {
@@ -295,6 +331,24 @@ export const translations = {
       totalOrders: 'Всего заказов',
       revenue: 'Доход',
     },
+    // Games Page
+    gamesPage: {
+      title: 'Все игры',
+      subtitle: 'Найди свою следующую любимую игру в нашей коллекции',
+      platforms: 'Платформы',
+      categories: 'Категории',
+      priceRange: 'Диапазон цен',
+      filters: 'Фильтры',
+      clearFilters: 'Сбросить фильтры',
+      sortBy: 'Сортировка',
+      sortNewest: 'Новинки',
+      sortPriceLow: 'Цена: по возрастанию',
+      sortPriceHigh: 'Цена: по убыванию',
+      sortName: 'Название',
+      sortRating: 'Рейтинг',
+      gamesFound: 'игр найдено',
+      noResultsHint: 'Попробуй изменить фильтры или поисковый запрос',
+    },
     // Common
     common: {
       loading: 'Загрузка...',
@@ -303,8 +357,8 @@ export const translations = {
       cancel: 'Отмена',
       delete: 'Удалить',
       edit: 'Редактировать',
-      search: 'Поиск...',
-      noResults: 'Ничего не найдено',
+      search: 'Поиск игр...',
+      noResults: 'Игры не найдены',
     },
   },
 } as const;
