@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { useAuth } from '@/hooks/useAuth';
+import { useCart } from '@/hooks/useCart';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Gamepad2, Menu, User, LogOut, Shield } from 'lucide-react';
+import { Gamepad2, Menu, User, LogOut, Shield, ShoppingCart } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,6 +19,7 @@ import { toast } from 'sonner';
 export function Navbar() {
   const { t } = useLanguage();
   const { user, isAdmin, signOut } = useAuth();
+  const { totalItems, setIsOpen: setCartOpen } = useCart();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -63,6 +65,21 @@ export function Navbar() {
 
           {/* Right Side */}
           <div className="flex items-center gap-2">
+            {/* Cart Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="relative"
+              onClick={() => setCartOpen(true)}
+            >
+              <ShoppingCart className="h-5 w-5" />
+              {totalItems > 0 && (
+                <span className="absolute -top-1 -right-1 min-w-5 h-5 flex items-center justify-center text-xs font-bold bg-secondary text-secondary-foreground rounded-full px-1">
+                  {totalItems}
+                </span>
+              )}
+            </Button>
+
             <LanguageSwitcher />
             
             {user ? (

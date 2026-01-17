@@ -109,6 +109,19 @@ export const translations = {
       gamesFound: 'games found',
       noResultsHint: 'Try adjusting your filters or search query',
     },
+    // Cart
+    cart: {
+      title: 'Shopping Cart',
+      items: 'items',
+      empty: 'Your cart is empty',
+      emptyHint: 'Add some games to get started',
+      browseGames: 'Browse Games',
+      subtotal: 'Subtotal',
+      total: 'Total',
+      clear: 'Clear',
+      checkout: 'Checkout',
+      addedToCart: 'Added to cart!',
+    },
     // Common
     common: {
       loading: 'Loading...',
@@ -229,6 +242,19 @@ export const translations = {
       gamesFound: 'თამაში მოიძებნა',
       noResultsHint: 'სცადე ფილტრების ან ძებნის შეცვლა',
     },
+    // Cart
+    cart: {
+      title: 'კალათა',
+      items: 'ნივთი',
+      empty: 'თქვენი კალათა ცარიელია',
+      emptyHint: 'დაამატე რამდენიმე თამაში დასაწყებად',
+      browseGames: 'თამაშების ნახვა',
+      subtotal: 'ჯამი',
+      total: 'სულ',
+      clear: 'გასუფთავება',
+      checkout: 'გადახდა',
+      addedToCart: 'კალათაში დამატებულია!',
+    },
     // Common
     common: {
       loading: 'იტვირთება...',
@@ -348,6 +374,19 @@ export const translations = {
       sortRating: 'Рейтинг',
       gamesFound: 'игр найдено',
       noResultsHint: 'Попробуй изменить фильтры или поисковый запрос',
+    },
+    // Cart
+    cart: {
+      title: 'Корзина',
+      items: 'товаров',
+      empty: 'Ваша корзина пуста',
+      emptyHint: 'Добавьте несколько игр для начала',
+      browseGames: 'Смотреть игры',
+      subtotal: 'Подитог',
+      total: 'Итого',
+      clear: 'Очистить',
+      checkout: 'Оформить заказ',
+      addedToCart: 'Добавлено в корзину!',
     },
     // Common
     common: {
