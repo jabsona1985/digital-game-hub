@@ -54,6 +54,16 @@ export const translations = {
       platforms: 'Platforms',
       category: 'Category',
     },
+    // Game Detail Page
+    gameDetail: {
+      backToGames: 'Back to Games',
+      description: 'About This Game',
+      inStock: 'In Stock',
+      keysAvailable: 'keys available',
+      instantDeliveryDesc: 'Get your key instantly',
+      securePaymentDesc: 'Safe & encrypted',
+      supportDesc: 'Always here to help',
+    },
     // Footer
     footer: {
       rights: 'All rights reserved',
@@ -187,6 +197,16 @@ export const translations = {
       platforms: 'პლატფორმები',
       category: 'კატეგორია',
     },
+    // Game Detail Page
+    gameDetail: {
+      backToGames: 'თამაშებში დაბრუნება',
+      description: 'თამაშის შესახებ',
+      inStock: 'მარაგშია',
+      keysAvailable: 'გასაღები ხელმისაწვდომია',
+      instantDeliveryDesc: 'მიიღე გასაღები მყისიერად',
+      securePaymentDesc: 'უსაფრთხო და დაშიფრული',
+      supportDesc: 'ყოველთვის მზად დახმარებისთვის',
+    },
     // Footer
     footer: {
       rights: 'ყველა უფლება დაცულია',
@@ -319,6 +339,16 @@ export const translations = {
       outOfStock: 'Нет в наличии',
       platforms: 'Платформы',
       category: 'Категория',
+    },
+    // Game Detail Page
+    gameDetail: {
+      backToGames: 'Назад к играм',
+      description: 'Об игре',
+      inStock: 'В наличии',
+      keysAvailable: 'ключей доступно',
+      instantDeliveryDesc: 'Получите ключ мгновенно',
+      securePaymentDesc: 'Безопасно и зашифровано',
+      supportDesc: 'Всегда готовы помочь',
     },
     // Footer
     footer: {

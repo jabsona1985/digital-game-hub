@@ -9,6 +9,7 @@ import { CartProvider } from "@/hooks/useCart";
 import { CartSidebar } from "@/components/cart/CartSidebar";
 import Index from "./pages/Index";
 import Games from "./pages/Games";
+import GameDetail from "./pages/GameDetail";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Admin from "./pages/Admin";
@@ -27,8 +28,9 @@ const App = () => (
             <CartSidebar />
             <BrowserRouter>
               <Routes>
-                <Route path="/" element={<Index />} />
+              <Route path="/" element={<Index />} />
                 <Route path="/games" element={<Games />} />
+                <Route path="/games/:id" element={<GameDetail />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/admin" element={<Admin />} />

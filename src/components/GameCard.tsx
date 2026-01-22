@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { useCart } from '@/hooks/useCart';
 import { Language } from '@/lib/i18n/translations';
@@ -52,7 +53,8 @@ export function GameCard({ game, language }: GameCardProps) {
   };
 
   return (
-    <div className="group relative rounded-2xl overflow-hidden glass neon-border hover:scale-[1.02] transition-all duration-300">
+    <Link to={`/games/${game.id}`} className="block">
+      <div className="group relative rounded-2xl overflow-hidden glass neon-border hover:scale-[1.02] transition-all duration-300">
       {/* Image */}
       <div className="relative aspect-[16/10] overflow-hidden">
         {game.image_url ? (
@@ -126,7 +128,9 @@ export function GameCard({ game, language }: GameCardProps) {
           <Button 
             size="sm" 
             className="bg-gradient-primary hover:opacity-90 glow-primary"
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
               addToCart(game);
               toast.success(t.cart.addedToCart);
             }}
@@ -136,5 +140,6 @@ export function GameCard({ game, language }: GameCardProps) {
         </div>
       </div>
     </div>
+    </Link>
   );
 }
