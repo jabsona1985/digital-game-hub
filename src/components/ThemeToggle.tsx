@@ -1,5 +1,6 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,8 +11,22 @@ import {
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function ThemeToggle() {
-  const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const { setTheme } = useTheme();
   const { t } = useLanguage();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <Button variant="ghost" size="icon" className="relative">
+        <Sun className="h-5 w-5" />
+        <span className="sr-only">Toggle theme</span>
+      </Button>
+    );
+  }
 
   return (
     <DropdownMenu>
