@@ -155,6 +155,12 @@ export const translations = {
       checkout: 'Checkout',
       addedToCart: 'Added to cart!',
     },
+    // Theme
+    theme: {
+      light: 'Light',
+      dark: 'Dark',
+      system: 'System',
+    },
     // Common
     common: {
       loading: 'Loading...',
@@ -321,6 +327,12 @@ export const translations = {
       checkout: 'გადახდა',
       addedToCart: 'კალათაში დამატებულია!',
     },
+    // Theme
+    theme: {
+      light: 'ნათელი',
+      dark: 'მუქი',
+      system: 'სისტემა',
+    },
     // Common
     common: {
       loading: 'იტვირთება...',
@@ -486,6 +498,12 @@ export const translations = {
       clear: 'Очистить',
       checkout: 'Оформить заказ',
       addedToCart: 'Добавлено в корзину!',
+    },
+    // Theme
+    theme: {
+      light: 'Светлая',
+      dark: 'Тёмная',
+      system: 'Система',
     },
     // Common
     common: {
