@@ -4,6 +4,7 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 import { useAuth } from '@/hooks/useAuth';
 import { useCart } from '@/hooks/useCart';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Gamepad2, Menu, User, LogOut, Shield, ShoppingCart } from 'lucide-react';
@@ -80,6 +81,7 @@ export function Navbar() {
               )}
             </Button>
 
+            <ThemeToggle />
             <LanguageSwitcher />
             
             {user ? (

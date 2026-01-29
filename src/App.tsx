@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import { AuthProvider } from "@/hooks/useAuth";
 import { CartProvider } from "@/hooks/useCart";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { CartSidebar } from "@/components/cart/CartSidebar";
 import Index from "./pages/Index";
 import Games from "./pages/Games";
@@ -20,30 +21,32 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <LanguageProvider>
-      <AuthProvider>
-        <CartProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <CartSidebar />
-            <BrowserRouter>
-              <Routes>
-              <Route path="/" element={<Index />} />
-                <Route path="/games" element={<Games />} />
-                <Route path="/games/:id" element={<GameDetail />} />
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/admin" element={<Admin />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </BrowserRouter>
-          </TooltipProvider>
-        </CartProvider>
-      </AuthProvider>
-    </LanguageProvider>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+      <LanguageProvider>
+        <AuthProvider>
+          <CartProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Sonner />
+              <CartSidebar />
+              <BrowserRouter>
+                <Routes>
+                <Route path="/" element={<Index />} />
+                  <Route path="/games" element={<Games />} />
+                  <Route path="/games/:id" element={<GameDetail />} />
+                  <Route path="/checkout" element={<Checkout />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/signup" element={<Signup />} />
+                  <Route path="/admin" element={<Admin />} />
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </BrowserRouter>
+            </TooltipProvider>
+          </CartProvider>
+        </AuthProvider>
+      </LanguageProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 
